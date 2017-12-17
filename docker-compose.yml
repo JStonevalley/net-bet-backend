@@ -1,0 +1,9 @@
+version: '3.4'
+services:
+  local:
+    build: .
+    image: net-bet-local
+    container_name: net-bet-local
+    entrypoint: lein
+    volumes:
+      - .:/usr/src/app
