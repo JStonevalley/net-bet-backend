@@ -2,8 +2,15 @@ version: '3.4'
 services:
   local:
     build: .
-    image: net-bet-local
+    image: net-bet
     container_name: net-bet-local
     entrypoint: lein
     volumes:
-      - .:/usr/src/app
+      - .:/usr/net-bet-backend
+  interactive:
+    build: .
+    image: net-bet
+    container_name: net-bet-interactive
+    entrypoint: bash
+    volumes:
+      - .:/usr/net-bet-backend
